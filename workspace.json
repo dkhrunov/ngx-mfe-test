@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "address-form": "apps/address-form",
+    "shell": "apps/shell"
+  }
+}
