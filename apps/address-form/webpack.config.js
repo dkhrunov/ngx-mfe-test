@@ -42,6 +42,7 @@ module.exports = {
 			filename: "remoteEntry.js",
 			exposes: {
 				FormModule: 'apps/address-form/src/app/form/form.module.ts',
+				FormComponent: 'apps/address-form/src/app/form/form.component.ts',
 			},
 			shared: share({
 				"@angular/core": {
