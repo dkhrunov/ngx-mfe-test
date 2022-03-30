@@ -1,0 +1,98 @@
+{
+	"projectType": "application",
+	"root": "apps/fallbacks",
+	"sourceRoot": "apps/fallbacks/src",
+	"prefix": "ngx-mfe-test",
+	"targets": {
+		"build": {
+			"executor": "@nrwl/angular:webpack-browser",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/apps/fallbacks",
+				"index": "apps/fallbacks/src/index.html",
+				"main": "apps/fallbacks/src/main.ts",
+				"polyfills": "apps/fallbacks/src/polyfills.ts",
+				"tsConfig": "apps/fallbacks/tsconfig.app.json",
+				"inlineStyleLanguage": "scss",
+				"assets": ["apps/fallbacks/src/favicon.ico", "apps/fallbacks/src/assets"],
+				"styles": ["apps/fallbacks/src/styles.scss"],
+				"scripts": [],
+				"customWebpackConfig": {
+					"path": "apps/fallbacks/webpack.config.js"
+				}
+			},
+			"configurations": {
+				"production": {
+					"budgets": [
+						{
+							"type": "initial",
+							"maximumWarning": "500kb",
+							"maximumError": "1mb"
+						},
+						{
+							"type": "anyComponentStyle",
+							"maximumWarning": "2kb",
+							"maximumError": "4kb"
+						}
+					],
+					"fileReplacements": [
+						{
+							"replace": "apps/fallbacks/src/environments/environment.ts",
+							"with": "apps/fallbacks/src/environments/environment.prod.ts"
+						}
+					],
+					"outputHashing": "all",
+					"customWebpackConfig": {
+						"path": "apps/fallbacks/webpack.prod.config.js"
+					}
+				},
+				"development": {
+					"buildOptimizer": false,
+					"optimization": false,
+					"vendorChunk": true,
+					"extractLicenses": false,
+					"sourceMap": true,
+					"namedChunks": true
+				}
+			},
+			"defaultConfiguration": "production"
+		},
+		"serve": {
+			"executor": "@nrwl/angular:webpack-server",
+			"configurations": {
+				"production": {
+					"browserTarget": "fallbacks:build:production"
+				},
+				"development": {
+					"browserTarget": "fallbacks:build:development"
+				}
+			},
+			"defaultConfiguration": "development",
+			"options": {
+				"port": 4203,
+				"publicHost": "http://localhost:4203"
+			}
+		},
+		"extract-i18n": {
+			"executor": "@angular-devkit/build-angular:extract-i18n",
+			"options": {
+				"browserTarget": "fallbacks:build"
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"options": {
+				"lintFilePatterns": ["apps/fallbacks/src/**/*.ts", "apps/fallbacks/src/**/*.html"]
+			}
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["coverage/apps/fallbacks"],
+			"options": {
+				"jestConfig": "apps/fallbacks/jest.config.js",
+				"passWithNoTests": true
+			}
+		}
+	},
+	"tags": []
+}

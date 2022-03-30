@@ -109,7 +109,10 @@
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
-          "nx serve shell"
+          "nx serve shell",
+		  "nx serve address-form",
+		  "nx serve loaders",
+		  "nx serve fallbacks"
         ]
       }
     }
