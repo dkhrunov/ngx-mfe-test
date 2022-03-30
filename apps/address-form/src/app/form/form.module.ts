@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterModule } from '@angular/router';
+import { MfeModule } from 'ngx-mfe';
 import { FormComponent } from './form.component';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { FormComponent } from './form.component';
 				component: FormComponent,
 			},
 		]),
+		MfeModule,
 		MatInputModule,
 		MatButtonModule,
 		MatSelectModule,
