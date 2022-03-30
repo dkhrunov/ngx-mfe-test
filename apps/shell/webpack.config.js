@@ -70,6 +70,12 @@ module.exports = {
 					requiredVersion: 'auto',
 					includeSecondaries: true
 				},
+				"ngx-mfe": {
+					singleton: true,
+					strictVersion: true,
+					requiredVersion: 'auto',
+					includeSecondaries: true
+				},
 				...sharedMappings.getDescriptors(),
 			}),
 			library: {
