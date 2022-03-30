@@ -42,6 +42,7 @@ module.exports = {
 			filename: "remoteEntry.js",
 			exposes: {
 				FormModule: 'apps/address-form/src/app/form/form.module.ts',
+				FormComponent: 'apps/address-form/src/app/form/form.component.ts',
 			},
 			shared: share({
 				"@angular/core": {
@@ -69,6 +70,12 @@ module.exports = {
 					includeSecondaries: true
 				},
 				"rxjs": {
+					singleton: true,
+					strictVersion: true,
+					requiredVersion: 'auto',
+					includeSecondaries: true
+				},
+				"ngx-mfe": {
 					singleton: true,
 					strictVersion: true,
 					requiredVersion: 'auto',
