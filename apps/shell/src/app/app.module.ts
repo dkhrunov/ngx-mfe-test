@@ -40,8 +40,8 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 		),
 		MfeModule.forRoot({
 			mfeConfig: environment.microfrontends,
-			delay: 1000,
 			preload: ['loaders', 'fallbacks'],
+			loaderDelay: 1000,
 			loader: 'loaders/spinner',
 			fallback: 'fallbacks/mfe-fallback',
 		}),

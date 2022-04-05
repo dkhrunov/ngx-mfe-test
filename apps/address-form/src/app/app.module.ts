@@ -26,7 +26,7 @@ import { AppComponent } from './app.component';
 		),
 		MfeModule.forRoot({
 			mfeConfig: environment.microfrontends,
-			delay: 1000,
+			loaderDelay: 1000,
 			preload: ['loaders', 'fallbacks'],
 			loader: 'loaders/spinner',
 			fallback: 'fallbacks/mfe-fallback',

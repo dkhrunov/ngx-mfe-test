@@ -5905,21 +5905,7 @@
     "jest-regex-util" "^27.5.1"
     "jest-snapshot" "^27.5.1"
 
-"jest-resolve@*":
-  "version" "27.2.2"
-  dependencies:
-    "@jest/types" "^27.1.1"
-    "chalk" "^4.0.0"
-    "escalade" "^3.1.1"
-    "graceful-fs" "^4.2.4"
-    "jest-haste-map" "^27.2.2"
-    "jest-pnp-resolver" "^1.2.2"
-    "jest-util" "^27.2.0"
-    "jest-validate" "^27.2.2"
-    "resolve" "^1.20.0"
-    "slash" "^3.0.0"
-
-"jest-resolve@^27.2.2", "jest-resolve@^27.5.1":
+"jest-resolve@*", "jest-resolve@^27.2.2", "jest-resolve@^27.5.1":
   "integrity" "sha512-FFDy8/9E6CV83IMbDpcjOhumAQPDyETnU2KZ1O98DwTnz8AOBsW/Xv3GySr1mOZdItLR+zDZ7I/UdTFbgSOVCw=="
   "resolved" "https://registry.npmjs.org/jest-resolve/-/jest-resolve-27.5.1.tgz"
   "version" "27.5.1"
@@ -6767,9 +6753,9 @@
   "version" "2.6.2"
 
 "ngx-mfe@^1.0.7":
-  "integrity" "sha512-YPnByOF87JRiBS5+wL/L3qAaHU2XhmswJ3IQqhYozNQvt5JEu0g7i2NvQMGZD6dRFkxlcccfH+vlTU+7m0haWA=="
-  "resolved" "https://registry.npmjs.org/ngx-mfe/-/ngx-mfe-1.0.7.tgz"
-  "version" "1.0.7"
+  "integrity" "sha512-5ijTjh4kl6DsQ0L1+vYq5m3k6EHfKkj+ToIK9kdqkfvI9e4mmM+ReAEsYCGX4xUJSTaERmaKHWX+jcr2Uqbxqw=="
+  "resolved" "https://registry.npmjs.org/ngx-mfe/-/ngx-mfe-1.0.9.tgz"
+  "version" "1.0.9"
   dependencies:
     "tslib" "^2.3.0"
 
