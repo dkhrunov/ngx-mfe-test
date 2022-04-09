@@ -24,6 +24,7 @@ import { AppComponent } from './app.component';
 			],
 			{ initialNavigation: 'enabledBlocking' }
 		),
+		// Configured for working with MFE as Standalone app
 		MfeModule.forRoot({
 			mfeConfig: environment.microfrontends,
 			loaderDelay: 1000,
