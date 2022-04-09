@@ -6766,10 +6766,10 @@
   "resolved" "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   "version" "2.6.2"
 
-"ngx-mfe@^1.0.7":
-  "integrity" "sha512-YPnByOF87JRiBS5+wL/L3qAaHU2XhmswJ3IQqhYozNQvt5JEu0g7i2NvQMGZD6dRFkxlcccfH+vlTU+7m0haWA=="
-  "resolved" "https://registry.npmjs.org/ngx-mfe/-/ngx-mfe-1.0.7.tgz"
-  "version" "1.0.7"
+"ngx-mfe@^1.1.1":
+  "integrity" "sha512-uBKsHyRQDQhhlMOhXxhUeF2Jt7UQjTHr83beGEXzcOYI0aEiynT+XutJ7aVia6pEZUlqTzonYQFGjK/yHrNbvg=="
+  "resolved" "https://registry.npmjs.org/ngx-mfe/-/ngx-mfe-1.1.1.tgz"
+  "version" "1.1.1"
   dependencies:
     "tslib" "^2.3.0"
 
