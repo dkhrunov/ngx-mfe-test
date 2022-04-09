@@ -24,9 +24,10 @@ import { AppComponent } from './app.component';
 			],
 			{ initialNavigation: 'enabledBlocking' }
 		),
+		// Configured for working with MFE as Standalone app
 		MfeModule.forRoot({
 			mfeConfig: environment.microfrontends,
-			delay: 1000,
+			loaderDelay: 1000,
 			preload: ['loaders', 'fallbacks'],
 			loader: 'loaders/spinner',
 			fallback: 'fallbacks/mfe-fallback',

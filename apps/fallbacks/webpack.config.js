@@ -46,8 +46,7 @@ module.exports = {
 			name: 'fallbacks',
 			filename: 'remoteEntry.js',
 			exposes: {
-				MfeFallbackModule: 'apps/fallbacks/src/app/mfe-fallback/mfe-fallback.module.ts',
-				MfeFallbackComponent: 'apps/fallbacks/src/app/mfe-fallback/mfe-fallback.component.ts',
+				MfeFallback: 'apps/fallbacks/src/app/mfe-fallback/mfe-fallback.module.ts',
 			},
 			shared: share({
 				'@angular/core': {

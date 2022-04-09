@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { loadMfeModule, MfeModule } from 'ngx-mfe';
+import { loadMfe, MfeModule } from 'ngx-mfe';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -27,7 +27,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 						},
 						{
 							path: 'address',
-							loadChildren: () => loadMfeModule('address-form/form'),
+							loadChildren: () => loadMfe('address-form/form'),
 						},
 					],
 				},
@@ -40,7 +40,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 		),
 		MfeModule.forRoot({
 			mfeConfig: environment.microfrontends,
-			delay: 1000,
+			loaderDelay: 1000,
 			preload: ['loaders', 'fallbacks'],
 			loader: 'loaders/spinner',
 			fallback: 'fallbacks/mfe-fallback',
