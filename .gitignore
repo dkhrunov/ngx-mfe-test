@@ -8,6 +8,8 @@
 # dependencies
 /node_modules
 
+/.angular
+
 # IDEs and editors
 /.idea
 .project
@@ -37,5 +39,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-.angular
