@@ -2,25 +2,25 @@
  * This RemoteEntryModule is imported here to allow TS to find the Module during
  * compilation, allowing it to be included in the built bundle. This is required
  * for the Module Federation Plugin to expose the Module correctly.
- */
+ * */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { MfeModule } from 'ngx-mfe';
 import { environment } from '../environments/environment';
-import { AppComponent } from './app.component';
 
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
 		BrowserModule,
-		BrowserAnimationsModule,
 		RouterModule.forRoot(
 			[
 				{
 					path: '',
-					loadChildren: () => import('./form/form.module').then((m) => m.FormModule),
+					loadChildren: () =>
+						import('./mfe-test/mfe-test.module').then((m) => m.MfeTestModule),
 				},
 			],
 			{ initialNavigation: 'enabledBlocking' }
@@ -42,6 +42,7 @@ import { AppComponent } from './app.component';
 			},
 		}),
 	],
+	providers: [],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
