@@ -13,84 +13,87 @@ const share = mf.share;
  * the location of the generated temporary tsconfig file.
  */
 const tsConfigPath =
-	process.env.NX_TSCONFIG_PATH ?? path.join(__dirname, '../../tsconfig.base.json');
+  process.env.NX_TSCONFIG_PATH ?? path.join(__dirname, '../../tsconfig.base.json');
 
 const workspaceRootPath = path.join(__dirname, '../../');
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
-	tsConfigPath,
-	[
-		/* mapped paths to share */
-	],
-	workspaceRootPath
+  tsConfigPath,
+  [
+    /* mapped paths to share */
+  ],
+  workspaceRootPath
 );
 
 module.exports = {
-	output: {
-		uniqueName: 'loaders',
-		publicPath: 'auto',
-	},
-	optimization: {
-		runtimeChunk: false,
-	},
-	experiments: {
-		outputModule: true,
-	},
-	resolve: {
-		alias: {
-			...sharedMappings.getAliases(),
-		},
-	},
-	plugins: [
-		new ModuleFederationPlugin({
-			name: 'loaders',
-			filename: 'remoteEntry.js',
-			exposes: {
-				Spinner: 'apps/loaders/src/app/spinner/spinner.module.ts',
-			},
-			shared: share({
-				'@angular/core': {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true,
-				},
-				'@angular/common': {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true,
-				},
-				'@angular/common/http': {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true,
-				},
-				'@angular/router': {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true,
-				},
-				rxjs: {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true,
-				},
-				"ngx-mfe": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				...sharedMappings.getDescriptors(),
-			}),
-			library: {
-				type: 'module',
-			},
-		}),
-		sharedMappings.getPlugin(),
-	],
+  output: {
+    uniqueName: 'loaders',
+    publicPath: 'auto',
+  },
+  optimization: {
+    runtimeChunk: false,
+  },
+  experiments: {
+    outputModule: true,
+  },
+  resolve: {
+    alias: {
+      ...sharedMappings.getAliases(),
+    },
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'loaders',
+      filename: 'remoteEntry.js',
+      exposes: {
+        SpinnerModule: 'apps/loaders/src/app/spinner/spinner.module.ts',
+        SpinnerComponent: 'apps/loaders/src/app/spinner/spinner.component.ts',
+        ProgressBarModule: 'apps/loaders/src/app/progress-bar/progress-bar.module.ts',
+        ProgressBarComponent: 'apps/loaders/src/app/progress-bar/progress-bar.component.ts',
+      },
+      shared: share({
+        '@angular/core': {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true,
+        },
+        '@angular/common': {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true,
+        },
+        '@angular/common/http': {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true,
+        },
+        '@angular/router': {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true,
+        },
+        rxjs: {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true,
+        },
+        "ngx-mfe": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        ...sharedMappings.getDescriptors(),
+      }),
+      library: {
+        type: 'module',
+      },
+    }),
+    sharedMappings.getPlugin(),
+  ],
 };

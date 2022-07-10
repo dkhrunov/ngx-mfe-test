@@ -27,7 +27,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: 'fallbacks',
+    uniqueName: 'test',
     publicPath: 'auto',
   },
   optimization: {
@@ -43,11 +43,11 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'fallbacks',
+      name: 'test',
       filename: 'remoteEntry.js',
       exposes: {
-        MfeFallbackModule: 'apps/fallbacks/src/app/mfe-fallback/mfe-fallback.module.ts',
-        MfeFallbackComponent: 'apps/fallbacks/src/app/mfe-fallback/mfe-fallback.component.ts',
+        MfeTestModule: 'apps/test/src/app/mfe-test/mfe-test.module.ts',
+        MfeTestComponent: 'apps/test/src/app/mfe-test/mfe-test.component.ts',
       },
       shared: share({
         '@angular/core': {
@@ -79,12 +79,6 @@ module.exports = {
           strictVersion: true,
           requiredVersion: 'auto',
           includeSecondaries: true,
-        },
-        "ngx-mfe": {
-          singleton: true,
-          strictVersion: true,
-          requiredVersion: 'auto',
-          includeSecondaries: true
         },
         ...sharedMappings.getDescriptors(),
       }),

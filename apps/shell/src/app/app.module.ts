@@ -27,7 +27,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 						},
 						{
 							path: 'address',
-							loadChildren: () => loadMfe('address-form/form'),
+							loadChildren: () => loadMfe('address-form', 'FormModule'),
 						},
 					],
 				},
@@ -42,8 +42,16 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 			mfeConfig: environment.microfrontends,
 			preload: ['loaders', 'fallbacks'],
 			loaderDelay: 1000,
-			loader: 'loaders/spinner',
-			fallback: 'fallbacks/mfe-fallback',
+			loader: {
+				app: 'loaders',
+				module: 'SpinnerModule',
+				component: 'SpinnerComponent',
+			},
+			fallback: {
+				app: 'fallbacks',
+				module: 'MfeFallbackModule',
+				component: 'MfeFallbackComponent',
+			},
 		}),
 	],
 	bootstrap: [AppComponent],
