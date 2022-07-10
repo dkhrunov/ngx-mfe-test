@@ -1,5 +1,17 @@
 <ngx-mfe-test-nx-welcome></ngx-mfe-test-nx-welcome>
 <router-outlet></router-outlet>
-<ng-container *mfeOutlet="'address-form/form'"></ng-container>
-<ng-container *mfeOutlet="'address-form/form'"></ng-container>
-<ng-container *mfeOutlet="'address-form/form'"></ng-container>
+<ng-template
+  mfeOutlet="address-form"
+  mfeOutletModule="FormModule"
+  mfeOutletComponent="FormComponent"
+></ng-template>
+<ng-template
+  mfeOutlet="address-form"
+  mfeOutletModule="FormModule"
+  mfeOutletComponent="FormComponent"
+></ng-template>
+<ng-template
+  mfeOutlet="address-form"
+  mfeOutletModule="FormModule"
+  mfeOutletComponent="FormComponent"
+></ng-template>

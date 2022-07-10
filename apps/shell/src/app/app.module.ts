@@ -16,7 +16,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 			[
 				{
 					path: 'address-form',
-					loadChildren: () => loadMfe('address-form/form'),
+					loadChildren: () => loadMfe('address-form', 'FormModule'),
 				},
 			],
 			{ initialNavigation: 'enabledBlocking' }

@@ -17,75 +17,76 @@ const tsConfigPath = process.env.NX_TSCONFIG_PATH ?? path.join(__dirname, '../..
 const workspaceRootPath = path.join(__dirname, '../../');
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(tsConfigPath, [
-	/* mapped paths to share */
+  /* mapped paths to share */
 ], workspaceRootPath);
 
 module.exports = {
-	output: {
-		uniqueName: "address-form",
-		publicPath: "auto",
-	},
-	optimization: {
-		runtimeChunk: false,
-	},
-	experiments: {
-		outputModule: true
-	},
-	resolve: {
-		alias: {
-			...sharedMappings.getAliases(),
-		},
-	},
-	plugins: [
-		new ModuleFederationPlugin({
-			name: "address-form",
-			filename: "remoteEntry.js",
-			exposes: {
-				Form: 'apps/address-form/src/app/form/form.module.ts',
-			},
-			shared: share({
-				"@angular/core": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				"@angular/common": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				"@angular/common/http": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				"@angular/router": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				"rxjs": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				"ngx-mfe": {
-					singleton: true,
-					strictVersion: true,
-					requiredVersion: 'auto',
-					includeSecondaries: true
-				},
-				...sharedMappings.getDescriptors(),
-			}),
-			library: {
-				type: 'module'
-			},
-		}),
-		sharedMappings.getPlugin(),
-	],
+  output: {
+    uniqueName: "address-form",
+    publicPath: "auto",
+  },
+  optimization: {
+    runtimeChunk: false,
+  },
+  experiments: {
+    outputModule: true
+  },
+  resolve: {
+    alias: {
+      ...sharedMappings.getAliases(),
+    },
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "address-form",
+      filename: "remoteEntry.js",
+      exposes: {
+        FormModule: 'apps/address-form/src/app/form/form.module.ts',
+        FormComponent: 'apps/address-form/src/app/form/form.component.ts',
+      },
+      shared: share({
+        "@angular/core": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        "@angular/common": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        "@angular/common/http": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        "@angular/router": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        "rxjs": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        "ngx-mfe": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: 'auto',
+          includeSecondaries: true
+        },
+        ...sharedMappings.getDescriptors(),
+      }),
+      library: {
+        type: 'module'
+      },
+    }),
+    sharedMappings.getPlugin(),
+  ],
 };
