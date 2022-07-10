@@ -20,6 +20,13 @@ import { AppComponent } from './app.component';
 						import('./spinner/spinner.module').then((m) => m.SpinnerModule),
 				},
 				{
+					path: 'progress-bar',
+					loadChildren: () =>
+						import('./progress-bar/progress-bar.module').then(
+							(m) => m.ProgressBarModule
+						),
+				},
+				{
 					path: '**',
 					redirectTo: 'spinner',
 				},

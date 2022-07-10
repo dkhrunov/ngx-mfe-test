@@ -4,6 +4,7 @@
 		"address-form": "apps/address-form",
 		"fallbacks": "apps/fallbacks",
 		"loaders": "apps/loaders",
-		"shell": "apps/shell"
+		"shell": "apps/shell",
+		"test": "apps/test"
 	}
 }

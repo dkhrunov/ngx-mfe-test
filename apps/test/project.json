@@ -1,24 +1,23 @@
 {
 	"projectType": "application",
-	"root": "apps/shell",
-	"sourceRoot": "apps/shell/src",
+	"root": "apps/test",
+	"sourceRoot": "apps/test/src",
 	"prefix": "ngx-mfe-test",
 	"targets": {
 		"build": {
 			"executor": "@nrwl/angular:webpack-browser",
 			"outputs": ["{options.outputPath}"],
 			"options": {
-				"outputPath": "dist/apps/shell",
-				"index": "apps/shell/src/index.html",
-				"main": "apps/shell/src/main.ts",
-				"polyfills": "apps/shell/src/polyfills.ts",
-				"tsConfig": "apps/shell/tsconfig.app.json",
-				"inlineStyleLanguage": "scss",
-				"assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
-				"styles": ["apps/shell/src/styles.scss"],
+				"outputPath": "dist/apps/test",
+				"index": "apps/test/src/index.html",
+				"main": "apps/test/src/main.ts",
+				"polyfills": "apps/test/src/polyfills.ts",
+				"tsConfig": "apps/test/tsconfig.app.json",
+				"assets": ["apps/test/src/favicon.ico", "apps/test/src/assets"],
+				"styles": ["apps/test/src/styles.css"],
 				"scripts": [],
 				"customWebpackConfig": {
-					"path": "apps/shell/webpack.config.js"
+					"path": "apps/test/webpack.config.js"
 				}
 			},
 			"configurations": {
@@ -37,13 +36,13 @@
 					],
 					"fileReplacements": [
 						{
-							"replace": "apps/shell/src/environments/environment.ts",
-							"with": "apps/shell/src/environments/environment.prod.ts"
+							"replace": "apps/test/src/environments/environment.ts",
+							"with": "apps/test/src/environments/environment.prod.ts"
 						}
 					],
 					"outputHashing": "all",
 					"customWebpackConfig": {
-						"path": "apps/shell/webpack.prod.config.js"
+						"path": "apps/test/webpack.prod.config.js"
 					}
 				},
 				"development": {
@@ -61,47 +60,36 @@
 			"executor": "@nrwl/angular:webpack-server",
 			"configurations": {
 				"production": {
-					"browserTarget": "shell:build:production"
+					"browserTarget": "test:build:production"
 				},
 				"development": {
-					"browserTarget": "shell:build:development"
+					"browserTarget": "test:build:development"
 				}
 			},
 			"defaultConfiguration": "development",
 			"options": {
-				"port": 4200,
-				"publicHost": "http://localhost:4200"
+				"port": 4204,
+				"publicHost": "http://localhost:4204"
 			}
 		},
 		"extract-i18n": {
 			"executor": "@angular-devkit/build-angular:extract-i18n",
 			"options": {
-				"browserTarget": "shell:build"
+				"browserTarget": "test:build"
 			}
 		},
 		"lint": {
 			"executor": "@nrwl/linter:eslint",
 			"options": {
-				"lintFilePatterns": ["apps/shell/src/**/*.ts", "apps/shell/src/**/*.html"]
+				"lintFilePatterns": ["apps/test/src/**/*.ts", "apps/test/src/**/*.html"]
 			}
 		},
 		"test": {
 			"executor": "@nrwl/jest:jest",
-			"outputs": ["coverage/apps/shell"],
+			"outputs": ["coverage/apps/test"],
 			"options": {
-				"jestConfig": "apps/shell/jest.config.js",
+				"jestConfig": "apps/test/jest.config.js",
 				"passWithNoTests": true
-			}
-		},
-		"serve-mfe": {
-			"executor": "@nrwl/workspace:run-commands",
-			"options": {
-				"commands": [
-					"nx serve shell",
-					"nx serve address-form",
-					"nx serve loaders",
-					"nx serve fallbacks"
-				]
 			}
 		}
 	},
