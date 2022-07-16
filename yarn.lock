@@ -6833,10 +6833,10 @@ neo-async@^2.6.2:
   resolved "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-ngx-mfe@2.0.0:
-  version "2.0.0"
-  resolved "http://localhost:8081/repository/npm-group/ngx-mfe/-/ngx-mfe-2.0.0.tgz#7960f309cc96d15417c8adde858494ae412b8ae9"
-  integrity sha512-qBjAsVsMygZQyJUTawaBpIQDFmO3sxhsGV5l0EPZfxauJjdrH3hUaa0ELntkLJITHeGcUCZn7RYCrjIMmxL6RQ==
+ngx-mfe@2.1.0:
+  version "2.1.0"
+  resolved "http://localhost:8081/repository/npm-group/ngx-mfe/-/ngx-mfe-2.1.0.tgz#227055e1409f571d0a0c22b3fdd0cd82e19e91a3"
+  integrity sha512-dVZpkd7V3Ak4C3UuzypNVOxNr7CgFm9l+cGfLPRvxQr2J546DI93Dbqmy2+PpcOTl7fmbxknYn5h/FjOl12gzQ==
   dependencies:
     tslib "^2.3.0"
 
