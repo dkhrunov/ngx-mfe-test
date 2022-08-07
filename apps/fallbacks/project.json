@@ -1,6 +1,5 @@
 {
 	"projectType": "application",
-	"root": "apps/fallbacks",
 	"sourceRoot": "apps/fallbacks/src",
 	"prefix": "ngx-mfe-test",
 	"targets": {

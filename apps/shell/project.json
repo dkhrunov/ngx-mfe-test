@@ -1,6 +1,5 @@
 {
 	"projectType": "application",
-	"root": "apps/shell",
 	"sourceRoot": "apps/shell/src",
 	"prefix": "ngx-mfe-test",
 	"targets": {
