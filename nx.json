@@ -18,14 +18,6 @@
 			}
 		}
 	},
-	"targetDependencies": {
-		"build": [
-			{
-				"target": "build",
-				"projects": "dependencies"
-			}
-		]
-	},
 	"generators": {
 		"@nrwl/angular:application": {
 			"style": "scss",
@@ -42,5 +34,10 @@
 		}
 	},
 	"defaultProject": "shell",
-	"$schema": "./node_modules/nx/schemas/nx-schema.json"
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"targetDefaults": {
+		"build": {
+			"dependsOn": ["^build"]
+		}
+	}
 }
