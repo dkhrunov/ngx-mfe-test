@@ -1,10 +1,10 @@
 {
-	"version": 2,
-	"projects": {
-		"address-form": "apps/address-form",
-		"fallbacks": "apps/fallbacks",
-		"loaders": "apps/loaders",
-		"shell": "apps/shell",
-		"test": "apps/test"
-	}
+  "version": 2,
+  "projects": {
+    "address-form": "apps/address-form",
+    "fallbacks": "apps/fallbacks",
+    "loaders": "apps/loaders",
+    "shell": "apps/shell",
+    "test": "apps/test"
+  }
 }
