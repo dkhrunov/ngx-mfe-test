@@ -1,5 +1,6 @@
-module.exports = {
-	displayName: 'fallbacks',
+/* eslint-disable */
+export default {
+	displayName: 'address-form',
 	preset: '../../jest.preset.js',
 	setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
 	globals: {
@@ -8,7 +9,7 @@ module.exports = {
 			stringifyContentPathRegex: '\\.(html|svg)$',
 		},
 	},
-	coverageDirectory: '../../coverage/apps/fallbacks',
+	coverageDirectory: '../../coverage/apps/address-form',
 	transform: {
 		'^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
 	},

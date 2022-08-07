@@ -1,6 +1,6 @@
 {
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"projectType": "application",
-	"root": "apps/shell",
 	"sourceRoot": "apps/shell/src",
 	"prefix": "ngx-mfe-test",
 	"targets": {
@@ -89,7 +89,7 @@
 			"executor": "@nrwl/jest:jest",
 			"outputs": ["coverage/apps/shell"],
 			"options": {
-				"jestConfig": "apps/shell/jest.config.js",
+				"jestConfig": "apps/shell/jest.config.ts",
 				"passWithNoTests": true
 			}
 		},

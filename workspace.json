@@ -6,5 +6,6 @@
 		"loaders": "apps/loaders",
 		"shell": "apps/shell",
 		"test": "apps/test"
-	}
+	},
+	"$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

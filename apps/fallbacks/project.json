@@ -1,6 +1,6 @@
 {
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"projectType": "application",
-	"root": "apps/fallbacks",
 	"sourceRoot": "apps/fallbacks/src",
 	"prefix": "ngx-mfe-test",
 	"targets": {
@@ -89,7 +89,7 @@
 			"executor": "@nrwl/jest:jest",
 			"outputs": ["coverage/apps/fallbacks"],
 			"options": {
-				"jestConfig": "apps/fallbacks/jest.config.js",
+				"jestConfig": "apps/fallbacks/jest.config.ts",
 				"passWithNoTests": true
 			}
 		}
