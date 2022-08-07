@@ -89,7 +89,7 @@
 			"executor": "@nrwl/jest:jest",
 			"outputs": ["coverage/apps/fallbacks"],
 			"options": {
-				"jestConfig": "apps/fallbacks/jest.config.js",
+				"jestConfig": "apps/fallbacks/jest.config.ts",
 				"passWithNoTests": true
 			}
 		}

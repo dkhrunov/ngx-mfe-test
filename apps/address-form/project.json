@@ -92,7 +92,7 @@
 			"executor": "@nrwl/jest:jest",
 			"outputs": ["coverage/apps/address-form"],
 			"options": {
-				"jestConfig": "apps/address-form/jest.config.js",
+				"jestConfig": "apps/address-form/jest.config.ts",
 				"passWithNoTests": true
 			}
 		}

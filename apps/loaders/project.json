@@ -89,7 +89,7 @@
 			"executor": "@nrwl/jest:jest",
 			"outputs": ["coverage/apps/loaders"],
 			"options": {
-				"jestConfig": "apps/loaders/jest.config.js",
+				"jestConfig": "apps/loaders/jest.config.ts",
 				"passWithNoTests": true
 			}
 		}
