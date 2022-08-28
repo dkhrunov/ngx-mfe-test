@@ -173,6 +173,12 @@
   </ng-template>
 </ng-template>
 
+<h3>Angular v14 Standalone component loaded as MFE:</h3>
+<ng-template
+  mfeOutlet="test"
+  mfeOutletComponent="StandaloneComponent"
+></ng-template>
+
 <h3>Attempting to load a non-existent a MFE component:</h3>
 <ng-container *mfeOutlet="'loaders' module: 'NonExistentModule'; component: 'NonExistentComponent'"></ng-container>
 <h3>Attempting to load a non-existent a standalone MFE component:</h3>

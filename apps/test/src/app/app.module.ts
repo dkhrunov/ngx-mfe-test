@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { MfeModule } from 'ngx-mfe';
 import { environment } from '../environments/environment';
+import { StandaloneComponent } from './standalone/standalone.component';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -21,6 +22,10 @@ import { environment } from '../environments/environment';
 					path: '',
 					loadChildren: () =>
 						import('./mfe-test/mfe-test.module').then((m) => m.MfeTestModule),
+				},
+				{
+					path: 'standalone',
+					component: StandaloneComponent,
 				},
 			],
 			{ initialNavigation: 'enabledBlocking' }
