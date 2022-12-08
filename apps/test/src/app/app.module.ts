@@ -25,7 +25,10 @@ import { StandaloneComponent } from './standalone/standalone.component';
 				},
 				{
 					path: 'standalone',
-					component: StandaloneComponent,
+					loadComponent: () =>
+						import('./standalone/standalone.component').then(
+							(c) => c.StandaloneComponent
+						),
 				},
 			],
 			{ initialNavigation: 'enabledBlocking' }
