@@ -1,7 +1,6 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { DOCUMENT } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, OnInit, Renderer2 } from '@angular/core';
-import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -35,8 +34,15 @@ export class LayoutComponent implements OnInit {
 		this._renderer.setAttribute(this._document.body, 'class', this._theme$.value);
 	}
 
-	public switchMode({ checked: isDarkMode }: MatSlideToggleChange) {
-		this._theme$.next(isDarkMode ? 'theme-dark' : 'theme-light');
+	public switchMode() {
+		const currentTheme = this._theme$.value;
+
+		if (currentTheme === 'theme-light') {
+			this._theme$.next('theme-dark');
+		} else {
+			this._theme$.next('theme-light');
+		}
+
 		this._renderer.setAttribute(this._document.body, 'class', this._theme$.value);
 		localStorage.setItem('activeTheme', this._theme$.value);
 	}
