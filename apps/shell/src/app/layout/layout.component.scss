@@ -1,32 +1,27 @@
-// Import material theming functions
-@import "~@angular/material/theming";
+mat-sidenav-container {
+  height: 100%;
+}
 
-.sidenav-container {
-	height: 100%;
+main {
+  padding: 2rem;
 }
 
 .sidenav {
-	width: 200px;
-
-	&__link {
-		&_active {
-			background-color: mat-color(mat-palette($mat-pink), A200) !important;
-		}
-	}
+  width: 200px;
 }
 
 .sidenav .mat-toolbar {
-	background: inherit;
+  background: inherit;
 }
 
 .mat-toolbar {
-	.mat-primary {
-		position: sticky;
-		top: 0;
-		z-index: 1;
-	}
+  .mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 
-	mat-slide-toggle {
-		margin-left: auto;
-	}
+  button {
+    margin-left: auto;
+  }
 }
