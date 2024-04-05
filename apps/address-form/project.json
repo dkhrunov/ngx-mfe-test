@@ -94,8 +94,7 @@
 			"executor": "@nx/jest:jest",
 			"outputs": ["{workspaceRoot}/coverage/apps/address-form"],
 			"options": {
-				"jestConfig": "apps/address-form/jest.config.ts",
-				"passWithNoTests": true
+				"jestConfig": "apps/address-form/jest.config.ts"
 			}
 		}
 	}

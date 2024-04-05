@@ -91,8 +91,7 @@
 			"executor": "@nx/jest:jest",
 			"outputs": ["{workspaceRoot}/coverage/apps/fallbacks"],
 			"options": {
-				"jestConfig": "apps/fallbacks/jest.config.ts",
-				"passWithNoTests": true
+				"jestConfig": "apps/fallbacks/jest.config.ts"
 			}
 		}
 	}
