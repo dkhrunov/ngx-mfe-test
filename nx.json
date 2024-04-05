@@ -1,5 +1,4 @@
 {
-	"npmScope": "ngx-mfe-test",
 	"affected": {
 		"defaultBase": "main"
 	},
