@@ -37,7 +37,6 @@
 		"@angular/compiler-cli": "16.2.12",
 		"@angular/language-service": "16.2.12",
 		"@nrwl/angular": "18.2.2",
-		"@nrwl/cli": "15.3.0-rc.0",
 		"@nrwl/cypress": "18.2.2",
 		"@nrwl/eslint-plugin-nx": "18.2.2",
 		"@nrwl/jest": "18.2.2",
