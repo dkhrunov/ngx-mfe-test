@@ -5,8 +5,7 @@
 	"scripts": {
 		"start": "nx serve",
 		"build": "nx build",
-		"test": "nx test",
-		"postinstall": "ngcc --properties es2020 browser module main"
+		"test": "nx test"
 	},
 	"private": true,
 	"dependencies": {
