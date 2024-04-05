@@ -1,11 +1,26 @@
 {
   "version": 2,
   "projects": {
-    "address-form": "apps/address-form",
-    "fallbacks": "apps/fallbacks",
-    "loaders": "apps/loaders",
-    "shell": "apps/shell",
-    "test": "apps/test"
+    "address-form": {
+      "name": "address-form",
+      "root": "apps/address-form"
+    },
+    "fallbacks": {
+      "name": "fallbacks",
+      "root": "apps/fallbacks"
+    },
+    "loaders": {
+      "name": "loaders",
+      "root": "apps/loaders"
+    },
+    "shell": {
+      "name": "shell",
+      "root": "apps/shell"
+    },
+    "test": {
+      "name": "test",
+      "root": "apps/test"
+    }
   },
   "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
