@@ -55,8 +55,8 @@
 		"@nx/cypress": "18.2.2",
 		"@nx/jest": "18.2.2",
 		"@nx/eslint-plugin": "18.2.2",
-		"@nx/linter": "18.2.2",
-		"@nx/angular": "18.2.2"
+		"@nx/angular": "18.2.2",
+		"@nx/eslint": "18.2.2"
 	},
 	"packageManager": "yarn@3.3.0"
 }
