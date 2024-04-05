@@ -36,7 +36,6 @@
 		"@angular/cli": "~15.2.0",
 		"@angular/compiler-cli": "16.2.12",
 		"@angular/language-service": "16.2.12",
-		"@nrwl/angular": "18.2.2",
 		"@schematics/angular": "17.3.3",
 		"@types/jest": "29.4.4",
 		"@types/node": "18.16.9",
@@ -57,7 +56,8 @@
 		"@nx/cypress": "18.2.2",
 		"@nx/jest": "18.2.2",
 		"@nx/eslint-plugin": "18.2.2",
-		"@nx/linter": "18.2.2"
+		"@nx/linter": "18.2.2",
+		"@nx/angular": "18.2.2"
 	},
 	"packageManager": "yarn@3.3.0"
 }
