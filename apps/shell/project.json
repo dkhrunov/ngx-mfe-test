@@ -4,6 +4,7 @@
 	"projectType": "application",
 	"sourceRoot": "apps/shell/src",
 	"prefix": "ngx-mfe-test",
+	"tags": [],
 	"targets": {
 		"build": {
 			"executor": "@nrwl/angular:webpack-browser",
@@ -87,7 +88,7 @@
 			}
 		},
 		"test": {
-			"executor": "@nrwl/jest:jest",
+			"executor": "@nx/jest:jest",
 			"outputs": ["{workspaceRoot}/coverage/apps/shell"],
 			"options": {
 				"jestConfig": "apps/shell/jest.config.ts",
@@ -105,6 +106,5 @@
 				]
 			}
 		}
-	},
-	"tags": []
+	}
 }
