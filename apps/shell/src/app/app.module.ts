@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { loadMfe, MfeModule } from 'ngx-mfe';
+import { loadMfe, MfeConfig, MfeModule } from 'ngx-mfe';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -39,7 +39,24 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 			{ initialNavigation: 'enabledBlocking' }
 		),
 		MfeModule.forRoot({
-			mfeConfig: environment.microfrontends,
+			// // Async Observable load mfe config
+			// mfeConfig: {
+			// 	useLoader: () => of(environment.microfrontends).pipe(tap(console.log), delay(2000)),
+			// },
+
+			// // Async Promise load mfe config
+			mfeConfig: {
+				useLoader: () => {
+					return new Promise<MfeConfig>((resolve) => {
+						setTimeout(() => {
+							resolve(environment.microfrontends);
+						}, 2000);
+					});
+				},
+			},
+
+			// Sync load mfe config
+			// mfeConfig: environment.microfrontends,
 			preload: ['loaders', 'fallbacks'],
 			loaderDelay: 1000,
 			loader: {

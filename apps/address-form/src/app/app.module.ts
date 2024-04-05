@@ -27,6 +27,17 @@ import { AppComponent } from './app.component';
 		),
 		// Configured for working with MFE as Standalone app
 		MfeModule.forRoot({
+			// // Async Promise load mfe config
+			// mfeConfig: {
+			// 	useLoader: () => {
+			// 		console.log('loader call :>> ');
+			// 		return new Promise<MfeConfig>((resolve, reject) => {
+			// 			setTimeout(() => {
+			// 				resolve(environment.microfrontends);
+			// 			}, 2000);
+			// 		});
+			// 	},
+			// },
 			mfeConfig: environment.microfrontends,
 			loaderDelay: 1000,
 			preload: ['loaders', 'fallbacks'],
