@@ -37,7 +37,6 @@
 		"@angular/compiler-cli": "16.2.12",
 		"@angular/language-service": "16.2.12",
 		"@nrwl/angular": "18.2.2",
-		"@nrwl/cypress": "18.2.2",
 		"@nrwl/eslint-plugin-nx": "18.2.2",
 		"@nrwl/jest": "18.2.2",
 		"@nrwl/linter": "18.2.2",
@@ -57,7 +56,8 @@
 		"prettier": "2.7.1",
 		"ts-jest": "29.1.2",
 		"typescript": "5.4.4",
-		"@nx/workspace": "18.2.2"
+		"@nx/workspace": "18.2.2",
+		"@nx/cypress": "18.2.2"
 	},
 	"packageManager": "yarn@3.3.0"
 }
