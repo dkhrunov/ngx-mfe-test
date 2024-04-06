@@ -419,6 +419,21 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 				}
 			}
 		</style>
+		<!-- 'address-form', 'FormModule' -->
+		<!-- <ng-container *mfeOutlet="'address-form'; component: 'FormComponent'; module: 'FormModule' "></ng-container> -->
+
+		<ng-template
+			mfeOutlet="test"
+			mfeOutletModule="MfeTestModule"
+			mfeOutletComponent="MfeTestComponent"
+		></ng-template>
+
+		<ng-template
+			mfeOutlet="address-form"
+			mfeOutletModule="FormModule"
+			mfeOutletComponent="FormComponent"
+		></ng-template>
+
 		<div class="wrapper">
 			<div class="container">
 				<!--  WELCOME  -->
