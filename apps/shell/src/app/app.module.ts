@@ -39,24 +39,24 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 			{ initialNavigation: 'enabledBlocking' }
 		),
 		MfeModule.forRoot({
-			// // Async Observable load mfe config
+			// Async Observable load mfe config
 			// mfeConfig: {
 			// 	useLoader: () => of(environment.microfrontends).pipe(tap(console.log), delay(2000)),
 			// },
 
-			// // Async Promise load mfe config
-			mfeConfig: {
-				useLoader: () => {
-					return new Promise<MfeConfig>((resolve) => {
-						setTimeout(() => {
-							resolve(environment.microfrontends);
-						}, 2000);
-					});
-				},
-			},
+			// Async Promise load mfe config
+			// mfeConfig: {
+			// 	useLoader: () => {
+			// 		return new Promise<MfeConfig>((resolve) => {
+			// 			setTimeout(() => {
+			// 				resolve(environment.microfrontends);
+			// 			}, 2000);
+			// 		});
+			// 	},
+			// },
 
 			// Sync load mfe config
-			// mfeConfig: environment.microfrontends,
+			mfeConfig: environment.microfrontends,
 			preload: ['loaders', 'fallbacks'],
 			loaderDelay: 1000,
 			loader: {

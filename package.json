@@ -20,10 +20,10 @@
 		"@angular/platform-browser": "16.2.12",
 		"@angular/platform-browser-dynamic": "16.2.12",
 		"@angular/router": "16.2.12",
-		"ngx-mfe": "^15.1.0",
+		"ngx-mfe": "^16.0.0",
 		"rxjs": "7.8.1",
 		"tslib": "^2.0.0",
-		"zone.js": "0.14.4"
+		"zone.js": "~0.13.0"
 	},
 	"devDependencies": {
 		"@angular-devkit/build-angular": "17.3.3",
