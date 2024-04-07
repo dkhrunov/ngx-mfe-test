@@ -1,6 +1,5 @@
-import { Component, ChangeDetectionStrategy, Inject, Optional } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
-import { NGX_MFE_OPTIONS } from 'ngx-mfe';
 
 @Component({
 	selector: 'ngx-mfe-test-form',
@@ -92,14 +91,9 @@ export class FormComponent {
 		{ name: 'Wyoming', abbreviation: 'WY' },
 	];
 
-	constructor(
-		private fb: UntypedFormBuilder,
-		@Inject(NGX_MFE_OPTIONS) @Optional() private readonly provider: any
-	) {
-		alert(`'${NGX_MFE_OPTIONS}' = ${JSON.stringify(this.provider)}`);
-	}
+	constructor(private fb: UntypedFormBuilder) {}
 
-	onSubmit(): void {
+	public onSubmit(): void {
 		alert('Thanks!');
 	}
 }
