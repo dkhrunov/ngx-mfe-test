@@ -9,7 +9,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { RouterModule } from '@angular/router';
 import { MfeModule } from 'ngx-mfe';
 import { FormComponent } from './form.component';
-import { environment } from '../../environments/environment';
 
 @NgModule({
 	declarations: [FormComponent],
@@ -22,22 +21,6 @@ import { environment } from '../../environments/environment';
 			},
 		]),
 		MfeModule,
-		// Configured for working with MFE as Standalone app
-		// MfeModule.forRoot({
-		// 	mfeConfig: environment.microfrontends,
-		// 	loaderDelay: 1000,
-		// 	preload: ['loaders', 'fallbacks'],
-		// 	loader: {
-		// 		app: 'loaders',
-		// 		module: 'SpinnerModule',
-		// 		component: 'SpinnerComponent',
-		// 	},
-		// 	fallback: {
-		// 		app: 'fallbacks',
-		// 		module: 'MfeFallbackModule',
-		// 		component: 'MfeFallbackComponent',
-		// 	},
-		// }),
 		MatInputModule,
 		MatButtonModule,
 		MatSelectModule,
