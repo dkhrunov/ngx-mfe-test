@@ -3,7 +3,7 @@
 
 @mixin color($theme) {
   // Get the color config from the theme.
-  $color-config: mat.get-color-config($theme);
+  $color-config: mat.m2-get-color-config($theme);
 
   // Get the accent color palette from the color-config.
   $accent-palette: map.get($color-config, "accent");
@@ -11,7 +11,7 @@
   .sidenav {
     &__link {
       &_active {
-        background-color: mat.get-color-from-palette($accent-palette, 500);
+        background-color: mat.m2-get-color-from-palette($accent-palette, 500);
       }
     }
   }
@@ -19,20 +19,20 @@
 
 @mixin typography($theme) {
   // Get the typography config from the theme.
-  $typography-config: mat.get-typography-config($theme);
+  $typography-config: mat.m2-get-typography-config($theme);
 
   .my-carousel {
-    font-family: mat.font-family($typography-config);
+    font-family: mat.m2-font-family($typography-config);
   }
 }
 
 @mixin theme($theme) {
-  $color-config: mat.get-color-config($theme);
+  $color-config: mat.m2-get-color-config($theme);
   @if $color-config != null {
     @include color($theme);
   }
 
-  $typography-config: mat.get-typography-config($theme);
+  $typography-config: mat.m2-get-typography-config($theme);
   @if $typography-config != null {
     @include typography($theme);
   }
