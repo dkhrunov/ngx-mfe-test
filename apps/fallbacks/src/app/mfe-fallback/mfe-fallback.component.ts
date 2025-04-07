@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-	selector: 'ngx-mfe-test-fallbacks-mfe',
-	template: `
+    selector: 'ngx-mfe-test-fallbacks-mfe',
+    template: `
 		<mat-card>
 			<mat-card-header>
 				<mat-icon mat-card-avatar color="warn">view_in_ar</mat-icon>
@@ -11,8 +11,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 			</mat-card-header>
 		</mat-card>
 	`,
-	styles: [
-		`
+    styles: [
+        `
 			mat-card {
 				width: max-content;
 			}
@@ -23,7 +23,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 				width: 3.2rem;
 			}
 		`,
-	],
-	changeDetection: ChangeDetectionStrategy.OnPush,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class MfeFallbackComponent {}

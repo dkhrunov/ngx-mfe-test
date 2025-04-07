@@ -2,10 +2,11 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
-	selector: 'ngx-mfe-test-form',
-	templateUrl: './form.component.html',
-	styleUrls: ['./form.component.scss'],
-	changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngx-mfe-test-form',
+    templateUrl: './form.component.html',
+    styleUrls: ['./form.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class FormComponent {
 	addressForm = this.fb.group({

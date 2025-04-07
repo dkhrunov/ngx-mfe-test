@@ -5,10 +5,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
-	selector: 'ngx-mfe-test-layout',
-	templateUrl: './layout.component.html',
-	styleUrls: ['./layout.component.scss'],
-	changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'ngx-mfe-test-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class LayoutComponent implements OnInit {
 	private readonly _theme$ = new BehaviorSubject<'theme-light' | 'theme-dark'>('theme-light');
